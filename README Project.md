@@ -21,10 +21,11 @@ This evaluation demonstrates deploying and testing the Wallarm Filtering Node us
 - Connected via SSH using the `admin` username and the correct key pair.  
 - Registered the Filtering Node with Wallarm Cloud using:
   ```bash
-  sudo env WALLARM_LABELS='group=Wallarm Assessment' /opt/wallarm/usr/share/wallarm-common/cloud-init.py -t <your-wallarm-token> -m monitoring --proxy-pass https://httpbin.org -H us1.api.wallarm.com
+  sudo env WALLARM_LABELS='group=Wallarm Assessment' /opt/wallarm/usr/share/wallarm-common/cloud-init.py -t <wallarm-token> -m monitoring --proxy-pass https://httpbin.org -H us1.api.wallarm.com
 ````
 
 * Updated NGINX configuration to proxy traffic to **[https://httpbin.org](https://httpbin.org)**.
+* Also tested proxy traffic to [https://postman](https://postman-echo.com)**.
 
 3️⃣ **Backend Testing**
 
