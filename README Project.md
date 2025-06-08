@@ -20,9 +20,8 @@ This evaluation demonstrates deploying and testing the Wallarm Filtering Node us
 2️⃣ **Initial Configuration**  
 - Connected via SSH using the `admin` username and the correct key pair.  
 - Registered the Filtering Node with Wallarm Cloud using:
-  ```bash
+
   sudo env WALLARM_LABELS='group=Wallarm Assessment' /opt/wallarm/usr/share/wallarm-common/cloud-init.py -t <wallarm-token> -m monitoring --proxy-pass https://httpbin.org -H us1.api.wallarm.com
-````
 
 * Updated NGINX configuration to proxy traffic to **[https://httpbin.org](https://httpbin.org)**.
 * Also tested proxy traffic to [https://postman](https://postman-echo.com)**.
@@ -39,9 +38,8 @@ This evaluation demonstrates deploying and testing the Wallarm Filtering Node us
 * **Tool Used**: GoTestWAF, compiled from source on macOS.
 * **Command**:
 
-  ```bash
   ./gotestwaf --url http://13.57.59.231 --reportFormat html --reportName report.html --noEmailReport
-  ```
+
 * **Outcome**:
 
   * Some attack requests resulted in **504 Gateway Timeouts** – this is expected because **httpbin.org** is a public service that likely drops malicious traffic.
@@ -91,7 +89,7 @@ The evaluation successfully demonstrates that the Wallarm Filtering Node, deploy
 * [GoTestWAF GitHub](https://github.com/wallarm/gotestwaf)
 * [httpbin.org](https://httpbin.org/)
 
-
+````
 
 
 
